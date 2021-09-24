@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration
             $table->string('typeof', 100);
             $table->string('subtitle', 50);
             $table->string('paragraph', 50);
-            $table->string('author', 50);
+            $table->foreignId('author_id', 50)->constrained();
             $table->text('picture');
             $table->timestamps();
         });
