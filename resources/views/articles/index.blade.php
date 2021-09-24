@@ -10,12 +10,12 @@
     
     @foreach($articles as $article)
         <div>
-            @dd($article)
+            {{-- @dd($article) --}}
             <div>{{ $article->title }}</div>
             <div>{{ $article->typeof }}</div>
             <div>{{ $article->subtitle }}</div>
             <div>{{ $article->paragraph }}</div>
-            <div>{{ $article->author }}</div>
+            <div>{{ $article->author()->first()->name }}</div>
             <img src="{{ $article->picture }}" alt=""><br>
             
         </div>
